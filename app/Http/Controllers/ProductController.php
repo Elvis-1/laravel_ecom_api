@@ -25,11 +25,10 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return ProductCollection::collection(Product::all()); 
+        //return ProductCollection::collection(Product::all()); 
         // return new ProductCollection(Product::all()); // this works when transforming a single product
 
-        //return ProductResource::collection(Product::all());
-
+        return ProductResource::collection(Product::paginate());
 
     }
 
