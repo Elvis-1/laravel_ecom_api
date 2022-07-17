@@ -38,7 +38,8 @@ class ReviewController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(StoreReviewRequest $request, Product $product)
-    {
+    { 
+
         $review = new Review($request->all());
         $product->reviews()->save($review);
         return response([
